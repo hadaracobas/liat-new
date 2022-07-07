@@ -1,0 +1,264 @@
+/* START GENERAL  */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+p {
+  color: #a9a9a9;
+}
+
+p {
+  font-family: "Quattrocento", serif;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.625;
+  margin: 16px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #829da5;
+}
+
+.entry-title {
+  font-weight: 400;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 28px;
+  margin-bottom: 22px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-family: "Quattrocento", serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* END GENERAL  */
+
+/* START HEADER  */
+.header {
+  text-align: center;
+  background-color: #fff;
+}
+
+.header__logo {
+  margin: 30px;
+}
+
+.header__logo--top,
+.header__logo--bottom {
+  display: block;
+}
+.header__logo--top {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #829da5;
+  font-family: "Quattrocento", serif;
+}
+.header__logo--bottom {
+  color: #999;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.menu-active {
+  max-height: 1000px !important;
+  transition: max-height 0.7s;
+}
+
+.header__menu,
+.header__submenu {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.header__menu-item,
+.header__submenu-item {
+  text-align: left;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.header__menu-item a,
+.header__menu-item span {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.submenu-icon {
+  position: absolute;
+  right: 14px;
+  display: inline-block;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .header__menu {
+    max-height: 1000px;
+    margin-right: 30px;
+    margin-top: 50px;
+    background-color: #fff;
+    display: flex;
+  }
+  .header__menu-icon-container {
+    display: none;
+  }
+
+  .header__menu-item {
+    margin: 0 10px;
+    display: block;
+    text-align: center;
+    min-width: 120px;
+  }
+  .submenu-icon {
+    display: none;
+  }
+  .header__menu-item:hover a,
+  .header__menu-item:hover span {
+    color: #829da5;
+  }
+
+  .header__menu-item:hover .header__submenu {
+    max-height: 1000px;
+    min-width: 120px;
+  }
+  .header__submenu-item:hover {
+    background-color: #829da5;
+  }
+  .header__submenu-item:hover a {
+    color: #fff;
+  }
+}
+
+/* START END  */
+
+/* START MAIN  */
+.main {
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 20px;
+  min-height: 80vh;
+}
+
+.main__section {
+  margin: 30px 0;
+}
+
+.main__paragraph-img {
+  float: right;
+  width: 185px;
+  margin-left: 16px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    /*padding: 0 40px;*/
+    margin-top: 170px;
+    padding: 20px 60px;
+  }
+}
+
+/* START MAIN  */
+
+/* START FOOTER */
+.footer {
+  background-color: #000;
+  color: #fff;
+  min-height: 74px;
+  width: 100%;
+}
+.footer div {
+  text-align: center;
+  padding-top: 30px;
+}
+/* END FOOTER */
+
+/* START TEST GALLERY */
+.gallery {
+  display: flex;
+  padding: 2px;
+  transition: 0.3s;
+}
+.gallery:hover .gallery__image {
+  filter: grayscale(1);
+}
+.gallery__column {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.gallery__link {
+  margin: 2px;
+  overflow: hidden;
+}
+.gallery__link:hover .gallery__image {
+  filter: grayscale(0);
+}
+.gallery__link:hover .gallery__caption {
+  opacity: 1;
+}
+.gallery__thumb {
+  position: relative;
+}
+.gallery__image {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+.gallery__image:hover {
+  transform: scale(1.1);
+}
+.gallery__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px 15px 15px;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: white;
+  opacity: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: 0.3s;
+}
+
+/* END TEST GALLERY */
+
+/* START MEDIA */
+.video iframe {
+  max-width: 95%;
+}
+/* END MEDIA */
